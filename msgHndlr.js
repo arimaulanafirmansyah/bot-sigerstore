@@ -871,11 +871,14 @@ module.exports = msgHandler = async (client, message) => {
         const { postlink, title, subreddit, url, nsfw, spoiler } = response.data;
         client.sendFileFromUrl(from, `${url}`, 'meme.jpg', `${title}`);
         break;
+		case '!pubg':
+			client.reply(from, 'UC 	HARGA	\n35	Rp8.500	\n73	Rp14.000	\n221	Rp39.500	\n770	Rp130.500	\n2013	Rp322.500	\n4200	Rp645.500	\n8750	Rp1.300.500', id)
+        break
       case '!menu':
 			client.sendText(from, help)
         break
-      case '!readme':
-        client.reply(from, readme, id);
+      case '!caraorder':
+        client.reply(from, 'Cara order FF dan ML, PUBGM\n1. Transfer uangnya ke (ketik !pay unthk metode pembayaran)\n. Kirim id ff atau id dan server ML ke dalam group\n*FF*\nContoh : \nId : 12345678\nOrder : 70 dm\n*ML*\nContoh : \nId dan server : 1234567 (7890) \nOrder : 86 DM\n*PUBGM*\nID : 5431980264\nNick : SigerStore.ID\nOrder : 1442 UC\n\n3. Proses 1-10 menit\n4. Done\n*kesalahan kirim id bukan lah tanggung jawab kami*.', id);
         break;
       case '!ml':
         client.reply(from, '💎MOBILE LEGEND VIA ID💎\n86💎 17.875\n172💎 35.750\n257💎 53.625\n344💎 71.500\n429💎 89.375\n514💎 107.250\n600💎 125.125\n706💎 143.000\n878💎 178.750\n1050💎 214.500\n1412💎 286.000\n2194💎 424.875\n3688💎 706.750\n5532💎 1.061.500\n9288💎 1.768.250\n\nStarlight⭐ RP 117.975\nTwilight Pass RP 117.975\nStarlight +⭐Rp  268.125', id);
@@ -883,6 +886,12 @@ module.exports = msgHandler = async (client, message) => {
       case '!ff':
         client.reply(from, '5. 💎	Rp 1000\n20💎	Rp 3000\n50💎	Rp8.000\n70💎	Rp9.500\n100💎	Rp13.500\n140💎	Rp18.500\n210💎	Rp28.000\n355💎	Rp46.200\n500💎	Rp65.520\n720💎	Rp92.400\n1000💎	Rp129.500\n1440💎	Rp184.800\n2000💎	Rp252.000\n2180💎	Rp290.000\n4000💎	Rp504.000\n7290💎	Rp924.000\n\nMM        RP 28000\nMB.        RP 112000', id);
         break;
+	  case '!qris':
+            client.sendFile(from, './qris.png', 'qris.png')
+         break;
+	  case '!pay':
+            client.sendFile(from, './pay.png', 'pay.png', 'Kamu bisa kirim VIA👇🏼\n👉🏼VIRTUAL ACCOUNT BANK\n👉🏼OVO = 082176118044\n👉🏼GOPAY = 082176118044\n👉🏼DANA = 082176118044\n👉🏼BCA = 1170924351\na/n Dino Finggi Aruna\nTerimakasih 💫')
+         break;
     }
   } catch (err) {
     console.log(color('[ERROR]', 'red'), err);
